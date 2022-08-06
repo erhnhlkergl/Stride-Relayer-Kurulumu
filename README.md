@@ -183,19 +183,30 @@ ${MNEMONIC_A}
 EOF
 ```
 
-#Hermes için cüzdanlarımızı bağlıyoruz. önce Stride cüzdanımız daha sonra Cosmos Cüzdanımız için yapıyoruz bu işlemi. 
-
+#Tek seferde burasını da girip enter yapıyoruz 
 ```sh
 sudo tee $HOME/.hermes/${CHAIN_ID_B}.mnemonic > /dev/null <<EOF
 ${MNEMONIC_B}
 EOF
 ```
 
+#Hermes için cüzdanlarımızı bağlıyoruz. önce Stride cüzdanımız daha sonra Cosmos Cüzdanımız için yapıyoruz bu işlemi.
+
 ```sh
 hermes keys add --chain ${CHAIN_ID_A} --mnemonic-file $HOME/.hermes/${CHAIN_ID_A}.mnemonic
 ```
 
+```sh
+hermes keys add --chain ${CHAIN_ID_B} --mnemonic-file $HOME/.hermes/${CHAIN_ID_B}.mnemonic
+```
+
 #Bu kısımda Discord'dan faucet kullanıyoruz her iki cüzdanımız için. 
+-[Discord](https://discord.com/channels/988945059783278602/992572020535599244).
+
+$faucet-stride:$STRIDEADRESI
+$faucet-atom:$COSMOSADRESI
+
+faucet kanalında 15 dakika limiti vardır. iki fauceti ayrı ayrı kullanalım.
 
 #Hermes için systemd oluşturuyoruz
 
