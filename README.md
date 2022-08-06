@@ -1,1 +1,1 @@
-<hj aligen="center">STRIDE RELAYER</hj>
+<hj align="center">STRIDE RELAYER</hj>
