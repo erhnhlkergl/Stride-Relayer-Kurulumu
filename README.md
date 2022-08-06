@@ -1,1 +1,1 @@
-<h1 aligen="center">STRIDE RELAYER</h1>
+<hj aligen="center">STRIDE RELAYER</hj>
